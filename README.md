@@ -1,1 +1,1 @@
-Readme for shared repository w Julie. HW within here. 
+Readme for shared repository w Julie. HW and notes within here. 
