@@ -1,0 +1,28 @@
+
+Madison Harris Homework 2
+Shared repository
+
+1) make a new repository via github
+2) git clone https://github.com/madrharris/Bio792_Shared
+3) git status
+4) touch README.md
+5) nano README.md
+6) git add README.md
+7) git commit -m "adding readme descriptor"
+
+### made some directories and moved files within and around
+
+8) git add HW_files/ notes/
+9) git commit -m "adding directories HW & notes"
+10) git push
+
+
+### extra insurance to make sure pushing and pulling works from both ends
+11) git pull origin master --allow-unrelated-histories
+12) git config pull.rebase false  # merge, recommended by terminal
+13) git fetch origin master ### <--- usually not needed
+
+
+
+
+
