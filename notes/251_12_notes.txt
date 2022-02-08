@@ -1,0 +1,52 @@
+1/25 notes: git version control
+(base) Madisons-MacBook-Pro:~ mine$ git config --global core.autocrlf input
+(base) Madisons-MacBook-Pro:~ mine$ git config --global user.name "madrharris"
+(base) Madisons-MacBook-Pro:~ mine$ git config --global user.email "madrharris22@gmail.com"
+(base) Madisons-MacBook-Pro:~ mine$ git config --global core.editor "bbedit -w"
+(base) Madisons-MacBook-Pro:~ mine$ 
+
+
+
+just into wherever. Using the --global command does it to the whole computer
+
+
+files: make a change --> into staging area. Then commit the changes in "message" to the Repository
+	add edits to the staging area that you want to track 
+	
+	
+error with init: xcode-select --install
+
+don't lose the .git/ file. Will lose everything
+
+git commit -m (message) "fdjsdjhdsh"
+> [main (root-commit) 0acab91] start notes on mars as a base
+
+commit messages are a key, can be used to see what each commit's purpose was. brief but explain well what was done
+
+git log: commit 0acab91b6e920051f51f665b65e90f1021822c3b (HEAD -> main)
+
+git diff: compare the file committed to the changes you've made
+
+
+Committing the file will move it from the staging area and will save it. 
+
+Every time you make a change,  do git commit -m "notes" to save each and every change. 
+	don;t need to do after every change, but recommend for big changes or code changes
+
+
+GIT does NOT TRACK DIRECTORIES. Only the files within
+
+
+
+Summary
+git status: shows status
+git add: puts files in staging area. NEED TO MAKE THE FILE BEFOREHAND
+git commit: saves staged content as the new commit (newest version)
+
+	if, after doing a git commit and there's still a red modified alert in status
+		do another commit but include the file name specifically
+		ex: git commit mars.txt -m "testing"
+
+
+Files can be stored in a project’s working directory (which users see), the staging area (where the next commit is being built up) and the local repository (where commits are permanently recorded).
+

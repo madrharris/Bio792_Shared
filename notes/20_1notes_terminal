@@ -1,0 +1,110 @@
+(base) Madisons-MacBook-Pro:shell-lesson-data mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:shell-lesson-data mine$ ls
+20_1notes.txt		molecules/		numbers.txt		writing/
+creatures/		north-pacific-gyre/	pizza.cfg
+data/			notes.txt		solar.pdf
+(base) Madisons-MacBook-Pro:shell-lesson-data mine$ cd molecules/
+(base) Madisons-MacBook-Pro:molecules mine$ ls -l
+total 48
+-rw-rw-r--  1 mine  staff  1158 Jul 30 01:41 cubane.pdb
+-rw-rw-r--  1 mine  staff   622 Jul 30 01:41 ethane.pdb
+-rw-rw-r--  1 mine  staff   422 Jul 30 01:41 methane.pdb
+-rw-rw-r--  1 mine  staff  1828 Jul 30 01:41 octane.pdb
+-rw-rw-r--  1 mine  staff  1226 Jul 30 01:41 pentane.pdb
+-rw-rw-r--  1 mine  staff   825 Jul 30 01:41 propane.pdb
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh 
+head: octane.pbd: No such file or directory
+(base) Madisons-MacBook-Pro:molecules mine$ ls
+cubane.pdb	methane.pdb	octane.pdb	propane.pdb
+ethane.pdb	middle.sh	pentane.pdb
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh 
+head: octane.pbd: No such file or directory
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh 
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+(base) Madisons-MacBook-Pro:molecules mine$ bash middle.sh 
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh 
+head: : No such file or directory
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh octane.pdb 
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh octane.pdb 
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh octane.pdb 5
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+(base) Madisons-MacBook-Pro:molecules mine$ sh middle.sh octane.pdb 10
+ATOM      4  C           1      -0.611  -0.426  -0.198  1.00  0.00
+ATOM      5  C           1       0.608   0.405   0.216  1.00  0.00
+ATOM      6  C           1       1.892  -0.400   0.001  1.00  0.00
+ATOM      7  C           1       3.113   0.429   0.414  1.00  0.00
+ATOM      8  C           1       4.397  -0.374   0.199  1.00  0.00
+ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
+ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
+ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
+ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
+(base) Madisons-MacBook-Pro:molecules mine$ nano middle.sh 
+(base) Madisons-MacBook-Pro:molecules mine$ nano end.sh
+(base) Madisons-MacBook-Pro:molecules mine$ ls
+cubane.pdb	ethane.pdb	middle.sh	pentane.pdb
+end.sh		methane.pdb	octane.pdb	propane.pdb
+(base) Madisons-MacBook-Pro:molecules mine$ open end.sh
+(base) Madisons-MacBook-Pro:molecules mine$ sh end.sh 
+end.sh: line 4: syntax error near unexpected token `echo'
+end.sh: line 4: `	echo $file'
+(base) Madisons-MacBook-Pro:molecules mine$ sh end.sh 
+end.sh: line 4: syntax error near unexpected token `echo'
+end.sh: line 4: `echo $file'
+(base) Madisons-MacBook-Pro:molecules mine$ nano end.sh 
+(base) Madisons-MacBook-Pro:molecules mine$ sh end.sh 
+end.sh: line 4: syntax error near unexpected token `echo'
+end.sh: line 4: `	echo $file'
+(base) Madisons-MacBook-Pro:molecules mine$ nano run_filelister.sh
+(base) Madisons-MacBook-Pro:molecules mine$ mv end.sh list_files.sh
+(base) Madisons-MacBook-Pro:molecules mine$ ls
+cubane.pdb		methane.pdb		pentane.pdb
+ethane.pdb		middle.sh		propane.pdb
+list_files.sh		octane.pdb		run_filelister.sh
+(base) Madisons-MacBook-Pro:molecules mine$ nano list_files.sh 
+(base) Madisons-MacBook-Pro:molecules mine$ sh list_files.sh 
+cubane.pdb
+ethane.pdb
+methane.pdb
+octane.pdb
+pentane.pdb
+propane.pdb
+(base) Madisons-MacBook-Pro:molecules mine$ sh run_filelister.sh 
+cubane.pdb
+ethane.pdb
+methane.pdb
+octane.pdb
+pentane.pdb
+propane.pdb
+(base) Madisons-MacBook-Pro:molecules mine$ 

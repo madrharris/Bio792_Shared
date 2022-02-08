@@ -1,0 +1,119 @@
+Linux Review HW: Madison Harris
+
+Part I
+
+[1]
+A graphical user interface uses icons, menus, and a mouse to interact with the system. 
+A command line interface is a program that uses text input to perform OS functions. 
+
+[2]
+The shell is the interface that you interact with to access and use a Unix system. It takes input given and executes programs. 
+Commonly called the terminal
+
+[3]		ls
+
+[4]		cd
+
+[5]		pwd
+
+[6]		man
+
+[7]		$
+
+[8]		ls -t, for most recent
+
+[9]		cd (space), cd ~
+
+[10]	absolute is the path from a directory all the way to root. Relative is current location to another location
+
+[11]	current directory, up a directory
+
+[12]	Spaces are interpreted as special characters that separate command line arguments. Using one in a file name will make the terminal
+think that the file name is a command
+
+[13]	FileName, File_name, File1Name...
+
+[14]	Nano is an in-shell text and script editor. I occasionally use nano, especially if BBedit (what I usually use) is being weird about permissions. 
+
+[15]	* represents one or more characters, always and executable one. Using *.txt will select any and all files ending in .txt within a directory
+
+[16]	list any file within the current directory ending in .txt
+
+[17]	it can rename files and important directories if the directory you're moving to doesn't exist
+
+[18]	rm removes and permanently deletes files. 
+
+[19]	> & >> are both output direction operators. > rewrites files and >> adds data to a pre-existing file
+
+[20]	head shows the top 5 lines of a file (or more if commanded to)
+
+[21]	| pipe can link commands together. "Do this | and then this"
+
+[22]	bring up the file, find the unique lines, then print the top 5 lines of the unique lines into a file (re-writing the file)
+
+[23]	A loop repeats a command (or set of commands) for each item in a list.
+
+[24]	it will add the file names of any .txt documents within a directory to another .txt document
+
+[25]	a list of commands (program) run through the Unix shell.
+
+[26]	The command can be repeated 100s of times with a single typed line rather than over and over. Much faster
+
+[27]	## is documentation within a script. It isn't a part of the command lines, but is used to write notes and extra information
+
+[28]	Global regular expression print. it searches files and pulls lines that match a given pattern or input. Basic search function to use within a file
+
+[29]	Find searches within a directory for files
+
+
+
+Part II:
+
+[1] 
+$ cd /Users/mine/Desktop/ | ls Desktop
+OR
+$ cd Desktop/
+$ ls
+
+[2]
+:~ mine$ cd ./Desktop/spring\ 2022/
+:spring 2022 mine$ cd ../grad/
+:grad mine$ cd /Users/mine/Desktop/shell-lesson-data/
+
+[3]
+$ mkdir TestHW && cd $_ && touch File1.txt File2.txt && ls *.txt
+## took some testing but I was able to get it all into one command line
+
+[4]
+$ wc -l Hutia_DNA.fasta 
+ 2382004 Hutia_DNA.fasta
+####	2382004 lines
+
+grep -c ">" Hutia_DNA.fasta 
+	1191002 sequence lines
+	
+[5]
+$ head -n 100 Hutia_DNA.fasta > MyOutputFile.fasta
+$ sort MyOutputFile.fasta | uniq | wc -l
+		100
+
+[6]
+#!/usr/bin/sh
+for file in *.txt
+do
+mv $file /Users/mine/Desktop/TestHW/TestHW2
+done
+
+
+
+[7]
+$ touch find_taxa.py | open find_taxa.py
+## execute with python find_taxa.py
+
+
+I tried, but couldn't figure out what to do here. 
+
+
+[8] $ grep -c "GAGA" Hutia_DNA.fasta 
+304806
+

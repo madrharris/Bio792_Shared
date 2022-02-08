@@ -1,0 +1,209 @@
+Last login: Thu Jan 20 13:01:56 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Madisons-MacBook-Pro:~ mine$ cd /Users/mine/Desktop/
+(base) Madisons-MacBook-Pro:Desktop mine$ ls
+Hutia/
+Screen Shot 2022-01-25 at 3.14.20 PM.png
+TestHW/
+grad/
+organized pics/
+planets/
+shell-lesson-data/
+spring 2022/
+(base) Madisons-MacBook-Pro:Desktop mine$ cd planets/
+(base) Madisons-MacBook-Pro:planets mine$ ls -a
+./	../	.git/
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+(base) Madisons-MacBook-Pro:planets mine$ touch mars.txt
+(base) Madisons-MacBook-Pro:planets mine$ ls -l
+total 0
+-rw-r--r--  1 mine  staff  0 Jan 25 15:32 mars.txt
+(base) Madisons-MacBook-Pro:planets mine$ nano mars.txt
+(base) Madisons-MacBook-Pro:planets mine$ ls
+mars.txt
+(base) Madisons-MacBook-Pro:planets mine$ cat mars.txt 
+Cold and dry, but everything is my favorite color. 
+(base) Madisons-MacBook-Pro:planets mine$ less mars.txt 
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) Madisons-MacBook-Pro:planets mine$ git add mars.txt 
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   mars.txt
+
+(base) Madisons-MacBook-Pro:planets mine$ git commit -m "start notes on mars as a base"
+[main (root-commit) 0acab91] start notes on mars as a base
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mars.txt
+(base) Madisons-MacBook-Pro:planets mine$ ls
+mars.txt
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+nothing to commit, working tree clean
+(base) Madisons-MacBook-Pro:planets mine$ git log
+commit 0acab91b6e920051f51f665b65e90f1021822c3b (HEAD -> main)
+Author: madrharris <madrharris22@gmail.com>
+Date:   Tue Jan 25 15:38:56 2022 -0800
+
+    start notes on mars as a base
+(base) Madisons-MacBook-Pro:planets mine$ nano mars.txt 
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Madisons-MacBook-Pro:planets mine$ git diff
+diff --git a/mars.txt b/mars.txt
+index a6820f8..46813c9 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,2 @@
+ Cold and dry, but everything is my favorite color. 
++The two moons may be a problem for wolfman.
+(base) Madisons-MacBook-Pro:planets mine$ nano mars.txt 
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Madisons-MacBook-Pro:planets mine$ git diff
+diff --git a/mars.txt b/mars.txt
+index a6820f8..4a55b86 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,2 @@
+ Cold and dry, but everything is my favorite color. 
++The two moons may be a problem for wolfman,
+(base) Madisons-MacBook-Pro:planets mine$ git commit -m "add concerns about effects mars moons on wolfman"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Madisons-MacBook-Pro:planets mine$ git add mars.txt 
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   mars.txt
+
+(base) Madisons-MacBook-Pro:planets mine$ git commit -m "add concerns about effects mars moons on
+> "
+[main 67babff] add concerns about effects mars moons on
+ 1 file changed, 1 insertion(+)
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+nothing to commit, working tree clean
+(base) Madisons-MacBook-Pro:planets mine$ git log
+commit 67babff1f6cda1bbc72f559725a40507e1d29a67 (HEAD -> main)
+Author: madrharris <madrharris22@gmail.com>
+Date:   Tue Jan 25 15:48:17 2022 -0800
+
+    add concerns about effects mars moons on
+
+commit 0acab91b6e920051f51f665b65e90f1021822c3b
+Author: madrharris <madrharris22@gmail.com>
+Date:   Tue Jan 25 15:38:56 2022 -0800
+
+    start notes on mars as a base
+(base) Madisons-MacBook-Pro:planets mine$ git 
+.git/     mars.txt  
+(base) Madisons-MacBook-Pro:planets mine$ git diff --staged
+(base) Madisons-MacBook-Pro:planets mine$ git log -l
+error: switch `l' requires a value
+(base) Madisons-MacBook-Pro:planets mine$ git log -1
+commit 67babff1f6cda1bbc72f559725a40507e1d29a67 (HEAD -> main)
+Author: madrharris <madrharris22@gmail.com>
+Date:   Tue Jan 25 15:48:17 2022 -0800
+
+    add concerns about effects mars moons on
+(base) Madisons-MacBook-Pro:planets mine$ git log -oneline
+fatal: unrecognized argument: -oneline
+(base) Madisons-MacBook-Pro:planets mine$ git log --oneline
+67babff (HEAD -> main) add concerns about effects mars moons on
+0acab91 start notes on mars as a base
+(base) Madisons-MacBook-Pro:planets mine$ git log --oneline --graph
+* 67babff (HEAD -> main) add concerns about effects mars moons on
+* 0acab91 start notes on mars as a base
+(base) Madisons-MacBook-Pro:planets mine$ cd ..
+(base) Madisons-MacBook-Pro:Desktop mine$ cd planets/
+(base) Madisons-MacBook-Pro:planets mine$ mkdir bio/
+(base) Madisons-MacBook-Pro:planets mine$ git add me.txt
+fatal: pathspec 'me.txt' did not match any files
+(base) Madisons-MacBook-Pro:planets mine$ nano me.txt
+(base) Madisons-MacBook-Pro:planets mine$ git add me.txt
+(base) Madisons-MacBook-Pro:planets mine$ git commit -m "add biography file"
+[main c9d941a] add biography file
+ 1 file changed, 3 insertions(+)
+ create mode 100644 me.txt
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+nothing to commit, working tree clean
+(base) Madisons-MacBook-Pro:planets mine$ nano m
+(base) Madisons-MacBook-Pro:planets mine$ ls
+bio/		mars.txt	me.txt
+(base) Madisons-MacBook-Pro:planets mine$ nano me.txt 
+(base) Madisons-MacBook-Pro:planets mine$ git diff me.txt 
+diff --git a/me.txt b/me.txt
+index 632703c..6b4dee4 100644
+--- a/me.txt
++++ b/me.txt
+@@ -1,3 +1,4 @@
+-name: mad
++name: madrharris
+ age: 23
+ program: biology
++hobby: vidgam
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   me.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Madisons-MacBook-Pro:planets mine$ git commit -m "made change"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   me.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Madisons-MacBook-Pro:planets mine$ git add me.txt 
+(base) Madisons-MacBook-Pro:planets mine$ git commit -m "made change"
+[main 07b6500] made change
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+(base) Madisons-MacBook-Pro:planets mine$ git status
+On branch main
+nothing to commit, working tree clean
+(base) Madisons-MacBook-Pro:planets mine$ 
