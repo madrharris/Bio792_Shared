@@ -1,0 +1,13 @@
+Git: Collaborating
+
+Conflicts
+
+when user 1 edits a file and pushes it up. user 2 opens their version of the doc and edits it on the same line and pushes it
+	should've done git pull before
+	
+fix:
+git pull
+open file, remove <<<<<>>>>> and error messages. Edit and change to liking. The person that gets the error can make these errors
+
+redo process: add, commit, push
+
