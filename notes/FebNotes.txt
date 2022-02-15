@@ -1,0 +1,92 @@
+Into to programming
+
+
+CV --> include github repo link
+
+Start thinking about project. Organizing data from genemapper?
+writeup, presentation, and 
+
+find download for practical computing for biologists (ch 7)
+
+"pseudocode" <-- write out code in english first. line that does a for-loop. Starts here, this is how it ends
+	write a story
+	
+* series of small tasks
+* can be written in any language
+* 
+
+Compiled vs interpretive languages
+Compiled: C, C+, java
+	translated from human readable code (source code) to computer understandable instructions
+	only compiled once
+Interpretive: perl, python, ruby, R, Matlab (scripting language)
+	processed by an interpreter each time they run, Interpreter is a compiled program
+	needs to be interp every time its run
+	program itself is source code, easy to modify, can be run on any machine
+	BASH is our interpreter for shell scripts
+	
+	
+Basics:
+arguments; values sent to program when run
+code
+	noun: program/line of program
+	
+execute: begin and carry out
+function: subprogram called repeatedly to perform same task
+parameters; values sent to a function when called
+parse: extract particular data elements from larger block of text
+statement: line of program which can assign a value, do comparison, or perform other ops
+
+How to write a program
+- what do
+- what variables
+- how move through
+- what want from end
+
+- write pseudocode first
+
+Building blocks
+
+- variables
+	name with a  value. #, character, list
+	name --> $filename $filelist, no $ in python
+		type --> kind of info
+		value --> actual piece of info
+		
+		types:
+			integer
+			floating point: number with non zero after decimal
+			boolean: two values. True or false
+			string: sequence of text. "This is a string"
+			
+		Container: arrays and lists
+			array: collection of data under one variable name
+				one dimensional array is called a list or vector
+					fruit = ['apple', 'pear', '6', '13.5']
+				each item can be referred to as its position in list. First element is 0.
+		Dictionary
+			associative array, hash or map
+			container with more than one variable
+			collection of names or keys and associated values	
+				eq: phone book. Names & Numbers. keep together
+				
+	variables in action
+		mathematical operations: * + /
+			var1 + var2	
+				both integers -> get sum
+				both strings -> combine them
+				
+				
+				
+- flow control --> how interact
+	loops
+		for loop: cycles through each item of a predefined collection
+		while loop: without a predetermined list: just until a condition is met
+- list and dictionaries
+
+- input & output
+
+
+HW: part 3 python programming.
+answer in jupyter notebook, turn it in as a jupyter notebook
+
