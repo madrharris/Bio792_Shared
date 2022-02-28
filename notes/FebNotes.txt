@@ -90,3 +90,37 @@ Building blocks
 HW: part 3 python programming.
 answer in jupyter notebook, turn it in as a jupyter notebook
 
+
+
+
+
+
+
+
+
+
+2/21
+White papers due ~two weeks
+Start thinking about project --> what do? meeting with julie tomorrow, bring it up a bit
+
+
+Pandas: import pandas as "something, nickname"
+
+HW: read states_covid with date as a "date" dtype, with only columns: hospitalization, ICU, and ventilators
+	dtype date --> data type for data or columns. Use str or object to preserve and not interpret dtype. 
+	
+states_covid_dtypedate = pd.read_csv('states_covid.csv',usecols=['date','hospitalized','hospitalizedCumulative','hospitalizedCurrently','hospitalizedIncrease',
+'inIcuCumulative','inIcuCurrently','onVentilatorCumulative','onVentilatorCurrently'])
+states_covid_dtypedate.dtypes['date']
+
+
+
+
+df = pd.DataFrame({'hospitalizedCumulative': [1000]})
+
+filtered_df = df.loc[(df['hospitalizedCumulative'] >='1000')]
+
+
+
+
+
