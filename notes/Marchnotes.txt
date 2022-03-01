@@ -1,0 +1,17 @@
+MarchNotes
+
+R Markdown
+
+how to make maps in R --> in part4 doc
+
+Intro to ggplot2.rmd
+	make map in R
+
+
+
+Project: use python to make code, pandas? pull info out of files, into a new file
+- pull from multiple files, all into one
+- for loop.
+	- for every file within a directory?
+	
+API program to actually download the files
