@@ -44,3 +44,19 @@ MAKE MAP FOR HOMEWORK
 
 
 
+
+3/8
+data cleaning via OpenRefine
+
+upload file, create project
+
+works on facets
+- scientific name --> facet --> text facet	
+		shows all species names in file, can make mass changes and edits and fixes
+
+
+
+HW: Data Cleaning: goal for today is to clean up a dataset, 
+	you can use the rodents data or a dataset of your choice and add a new version number on it - 
+	with a version spreadsheet and send it back to me.
+
