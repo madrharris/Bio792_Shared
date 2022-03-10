@@ -224,6 +224,9 @@ ggplot(data=city_sum_df,aes(x=State,y=mean,colour=Clim)) +
 city_long_df <- city_df %>%
   pivot_longer(cols = c(Ppt, Temp), names_to = "Clim", values_to = "value")
 View(city_long_df)
+View(city_df)
+
+
 
 #make same point and error but using stat_summary()
   ## lots of stuff in stat_summary()
@@ -294,7 +297,12 @@ levels(city_df$State)
 #change order and to full names, create new column
 city_df$State_name <- factor(city_df$State,levels=c('WA','OR','CA','NV','AZ'),
                              labels=c('Washington','Oregon','California','Nevada','Arizona'))
+## change order. New variable/column "State name"
+  ## use levels whatever, and what they should be called in order
+  ## basically adds a new column, copies levels into it, and re-writes those values to something else
+
 levels(city_df$State_name)
+View(city_df)
 
 #make figure to show change, notice legend
 ggplot(data=city_df,aes(x=Temp,y=Ppt)) + 
@@ -302,25 +310,32 @@ ggplot(data=city_df,aes(x=Temp,y=Ppt)) +
   stat_smooth(method='lm',linetype='dashed',colour='black',size=2)
 
 #### change axis labels and add title ####
+  ## xlab = x axis label, etc
 ggplot(data=city_df,aes(x=Temp,y=Ppt)) + 
   geom_point(aes(colour=State_name),size=4) + 
   stat_smooth(method='lm',linetype='dashed',colour='black',size=2) + 
   xlab('Temperature') + ylab('Precipitation') + 
   ggtitle('Temp vs. Precip. by State')
+  
+## ggtitle --> add title to top
 
 #### Change colour and fill ####
 # colour = points, lines, text, borders
 # fill = anything with area (can be empty points)
+      ## colour or color
 
-#pch to change point shape to be filled
-#21-25 are empty points of various shapes
+#   pch to change point shape to be filled
+#     21-25 are empty points of various shapes. Empty areas, can be filled with color
+#       http://www.sthda.com/english/wiki/ggplot2-point-shapes
 
 ggplot(data=city_df,aes(x=Temp,y=Ppt)) + 
-  geom_point(aes(fill=State_name),size=4,pch=21,colour='black') + 
+  geom_point(aes(fill=State_name),size=2,pch=21,colour='black') + 
   stat_smooth(method='lm',linetype='dashed',colour='black',size=2) + 
   xlab('Temperature') + ylab('Precipitation') + 
   ggtitle('Temp vs. Precip. by State')
 
+## add outline around points
+## filling circles. if did just colour, circles are now hollow. Colour is black (outline)
 
 ######################################################################
                 #### Scale ####
@@ -334,12 +349,12 @@ ggplot(data=city_df,aes(x=Temp,y=Ppt)) +
 # change axes labels, limits, breaks, and position = top
 
 ggplot(data=city_df,aes(x=Temp,y=Ppt)) + 
-  geom_point(aes(fill=State_name,shape=State_name),size=4,colour='black') + 
+  geom_point(aes(fill=State_name,shape=State_name),size=2,colour='black') + 
   stat_smooth(method='lm',linetype='dashed',colour='black',size=2) + 
   ggtitle('Temp vs. Precip. by State') + 
-  scale_fill_manual(name='State:',values=c('red','blue','yellow','green','grey70')) + 
-  scale_shape_manual(name='State:',values=c(21,22,23,24,25)) + 
-  scale_x_continuous(name='Temperature',limits=c(5,25),breaks=c(5,10,15,20,25),position = 'top') + 
+  scale_fill_manual(name='State:',values=c('red','blue','yellow','green','grey70')) + ## manually filling everything. Values as specific colors
+  scale_shape_manual(name='State:',values=c(21,22,23,24,25)) + ## custom shapes
+  scale_x_continuous(name='Temperature',limits=c(5,25),breaks=c(5,10,15,20,25),position = 'top') + # continuous x axis, limits, breaks at these points, on top of graph
   scale_y_continuous(name='Precipitation',limits=c(0,1500),breaks=c(0,250,500,1000,1250,1500)) 
 
 
@@ -350,7 +365,7 @@ ggplot(data=city_df,aes(x=Temp,y=Ppt)) +
 #changes figure layout, see primer for more info 
 
 #### standard themes ####
-#theme_bw()
+#theme_bw()       a specific standard
 ggplot(data=city_df,aes(x=Temp,y=Ppt)) + 
   geom_point(aes(fill=State_name,shape=State_name),size=4,colour='black') + 
   stat_smooth(method='lm',linetype='dashed',colour='black',size=2) + 
@@ -360,6 +375,7 @@ ggplot(data=city_df,aes(x=Temp,y=Ppt)) +
   scale_x_continuous(name='Temperature',limits=c(5,25),breaks=c(5,10,15,20,25)) + 
   scale_y_continuous(name='Precipitation',limits=c(0,1500),breaks=c(0,250,500,1000,1250,1500)) + 
   theme_bw()
+## just changes background
 
 #theme_classic()
 ggplot(data=city_df,aes(x=Temp,y=Ppt)) + 
@@ -388,12 +404,17 @@ ggplot(data=city_df,aes(x=Temp,y=Ppt)) +
   theme(legend.position = 'bottom', 
         plot.title = element_text(size = 20, colour="black",face = "bold"),
         axis.text = element_text(size=13),
+        #axis.ticks = element_blank(),
         axis.title = element_text(size = 16, colour="black",face = "bold"),
         panel.border = element_rect(size = 1.5, colour = "black"),
         legend.title = element_text(size = 16, colour="black",face = "bold",vjust = 1),
         legend.text = element_text(size=13),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
+
+## don't want something? element_blank()
+# xaxis ticks get rid of: axis.ticks.x = element_blank()
+
 
 
 ######################################################################
@@ -403,6 +424,7 @@ ggplot(data=city_df,aes(x=Temp,y=Ppt)) +
 
 #multiple ways to do this but this is the easiest
 # ggarrange in library(ggpubr) is my preferred package
+#   ggpublicationready
 
 #### For this, we need to assign plots to variables to use later ####
 
@@ -412,6 +434,8 @@ worst_plot <- ggplot(data=city_sum_df,aes(x=State,y=mean,fill=Clim)) +
   ggtitle('Worst') + 
   theme(plot.title = element_text(size = 20, colour="black",face = "bold"))
 worst_plot
+      ## save plots as variable, use it later
+
 
 #very_bad
 very_bad_plot <- ggplot(data=city_long_df,aes(x=State,y=value,fill=State)) +
@@ -445,8 +469,13 @@ okay_plot <- ggplot(data=city_long_df,aes(x=State,y=value,fill=State)) +
         plot.title = element_text(size = 20, colour="black",face = "bold"))
 okay_plot
 
-#### patchwork: 2 rows and 2 columns ####
+#### patchwork: 2 rows and 2 columns ####     makes a 4 panel figure
 worst_plot + very_bad_plot + bad_plot + okay_plot + plot_layout(ncol=2,nrow=2)
+      ## plot layout --> rows 2, columns 2
+(worst_plot + very_bad_plot)
+    ## literally adds them together
+
+
 
 #### patchwork 2 col, 1 row ####
 better_plot <- ggplot(data=city_long_df,aes(x=State,y=value,fill=State)) +
@@ -458,8 +487,8 @@ better_plot <- ggplot(data=city_long_df,aes(x=State,y=value,fill=State)) +
   ggtitle('Better') + 
   theme_bw() +
   theme(legend.position = 'None', 
-        plot.title = element_text(size = 26, colour="black",face = "bold"),
-        axis.text = element_text(size=18),
+        plot.title = element_text(size = 20, colour="black",face = "bold"),
+        axis.text = element_text(size=12),
         axis.title = element_text(size = 22, colour="black",face = "bold"),
         panel.border = element_rect(size = 1.5, colour = "black"),
         legend.title = element_text(size = 22, colour="black",face = "bold",vjust = 1),

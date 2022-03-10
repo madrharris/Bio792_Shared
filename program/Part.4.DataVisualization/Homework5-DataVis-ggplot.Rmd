@@ -1,6 +1,6 @@
 ---
 title: "Homework5-DataVis-ggplot"
-author: "YOUR NAME HERE"
+author: "Madison Harris"
 date: 'DUE: Thursday, March 10'
 output:
   html_document: default
