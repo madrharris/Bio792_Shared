@@ -1,0 +1,341 @@
+Last login: Tue Apr 26 09:46:37 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Madisons-MacBook-Pro:~ mine$ ssh madisonharris@pronghorn.rc.unr.edu
+madisonharris@pronghorn.rc.unr.edu's password: 
+Last login: Thu Apr 21 15:14:25 2022 from 172.27.16.163
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+Welcome to pronghorn!
+
+This UNR HPC cluster makes use of Environment Modules.
+Use the following commands to adjust your environment:
+
+'module avail'            - show available modules
+'module add <module>'     - adds a module to your environment for this session
+'module initadd <module>' - configure module to be loaded at every login
+
+-------------------------------------------------------------------
+contact:
+
+UNR Research Computing
+https://unrrc.slack.com
+hpc@unr.edu
+-------------------------------------------------------------------
+
+Loading default-environment
+  Loading requirement: dot slurm/pronghorn/20.11.7 unr-rc singularity/3.6.1 utilities
+[madisonharris@login-1 ~]$ /data/gpfs/assoc/biol_bids-1/
+-bash: /data/gpfs/assoc/biol_bids-1/: Is a directory
+[madisonharris@login-1 ~]$ cd /data/gpfs/assoc/biol_bids-1/
+[madisonharris@login-1 biol_bids-1]$ ls
+2021            avery       christianconnors  Course_content  example_helloworld.sl  kalujevic  madisonharris      mmcvicar
+atram.slurm.sh  cascarroll  ckhui             ekay            jallen                 lray       masgharianrostami  valaasam
+[madisonharris@login-1 madisonharris]$ pwd
+/data/gpfs/assoc/biol_bids-1/madisonharris
+[madisonharris@login-1 madisonharris]$ pwd
+/data/gpfs/assoc/biol_bids-1/madisonharris
+[madisonharris@login-1 madisonharris]$ cd ../
+[madisonharris@login-1 biol_bids-1]$ cp atram.slurm.sh madisonharris/
+[madisonharris@login-1 biol_bids-1]$ ls
+2021            avery       christianconnors  Course_content  example_helloworld.sl  kalujevic  madisonharris      mmcvicar
+atram.slurm.sh  cascarroll  ckhui             ekay            jallen                 lray       masgharianrostami  valaasam
+[madisonharris@login-1 biol_bids-1]$ cd madisonharris/
+[madisonharris@login-1 biol_bids-1]$ cd madisonharris/
+[madisonharris@login-1 madisonharris]$ mkdir temp
+[madisonharris@login-1 madisonharris]$ mkdir atram_out
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  temp
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ open atram.slurm.sh 
+Couldn't get a file descriptor referring to the console
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ cd ../
+[madisonharris@login-1 biol_bids-1]$ ls
+2021  atram.slurm.sh  avery  cascarroll  christianconnors  ckhui  Course_content  ekay  example_helloworld.sl  jallen  kalujevic  lray  madisonharris  masgharianrostami  mmcvicar  valaasam
+[madisonharris@login-1 biol_bids-1]$ ls -l
+total 30
+drwxrws--- 22 jallen23          p-jallen23       4096 Apr 14 14:04 2021
+-rwxr--r--  1 averygrant        rc-biol_bids-1    748 Apr 26 14:03 atram.slurm.sh
+drwxr-sr-x  4 averygrant        rc-biol_bids-1   8192 Apr 26 15:39 avery
+drwxr-sr-x  4 cascarroll        rc-biol_bids_adm 4096 Apr 26 15:23 cascarroll
+drwxr-sr-x  4 christianconnors  rc-biol_bids_adm 4096 Apr 26 15:37 christianconnors
+drwxr-sr-x  4 ckhui             rc-biol_bids_adm 4096 Apr 26 15:22 ckhui
+drwxrwsr-x  4 averygrant        rc-biol_bids-1   4096 Apr 21 14:22 Course_content
+drwxr-sr-x  4 ekay              rc-biol_bids_adm 4096 Apr 26 15:24 ekay
+-rw-r--r--  1 jallen23          rc-biol_bids-1    427 Apr 21 14:22 example_helloworld.sl
+drwxr-sr-x  4 jallen23          rc-biol_bids-1   4096 Apr 26 14:02 jallen
+drwxr-sr-x  2 kalujevic         rc-biol_bids_adm 4096 Apr 20 13:25 kalujevic
+drwxr-sr-x  4 lray              rc-biol_bids_adm 4096 Apr 26 15:23 lray
+drwxr-sr-x  4 madisonharris     rc-biol_bids_adm 4096 Apr 26 15:23 madisonharris
+drwxr-sr-x  2 masgharianrostami rc-biol_bids_adm 4096 Apr 20 13:25 masgharianrostami
+drwxr-sr-x  4 mmcvicar          rc-biol_bids_adm 4096 Apr 26 15:27 mmcvicar
+drwxr-sr-x  2 valaasam          rc-biol_bids_adm 4096 Apr 20 13:25 valaasam
+[madisonharris@login-1 biol_bids-1]$ cd Course_content/atram_files/
+[madisonharris@login-1 atram_files]$ ls
+AlspHabad  query_files  test_output
+[madisonharris@login-1 atram_files]$ cd AlspHabad/
+[madisonharris@login-1 AlspHabad]$ cd ../query_files/
+[madisonharris@login-1 query_files]$ ls
+100_proteins.fasta  1_protein.fasta  20_proteins.fasta  2_proteins.fasta  3_proteins.fasta  50_proteins.fasta  5_proteins.fasta
+[madisonharris@login-1 query_files]$ cd ../test_output/
+[madisonharris@login-1 test_output]$ ls
+AlspHabad_2_proteins_C1_AUG_0_12_mR1_1.all_contigs.fasta       AlspHabad_2_proteins_C1_PROT_1_15_mR1_2.all_contigs.fasta
+AlspHabad_2_proteins_C1_AUG_0_12_mR1_1.filtered_contigs.fasta  AlspHabad_2_proteins_C1_PROT_1_15_mR1_2.filtered_contigs.fasta
+[madisonharris@login-1 test_output]$ cd ../query_files/
+[madisonharris@login-1 query_files]$ ls
+100_proteins.fasta  1_protein.fasta  20_proteins.fasta  2_proteins.fasta  3_proteins.fasta  50_proteins.fasta  5_proteins.fasta
+[madisonharris@login-1 query_files]$ less 2_proteins.fasta 
+[madisonharris@login-1 query_files]$ cd ../../
+atram_files/        submission_scripts/ 
+[madisonharris@login-1 query_files]$ cd ../../../
+2021/              cascarroll/        ckhui/             ekay/              kalujevic/         madisonharris/     mmcvicar/          valaasam/          
+avery/             christianconnors/  Course_content/    jallen/            lray/              masgharianrostami/ .snapshots/        
+[madisonharris@login-1 query_files]$ cd ../../../madisonharris/
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  temp
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ sbatch atram.slurm.sh
+Submitted batch job 3769926
+[madisonharris@login-1 madisonharris]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769926 cpu-core- mharris_ madisonh  R       0:08      1 cpu-35
+           3769925 cpu-core- ccarroll cascarro  R       0:26      1 cpu-35
+           3769923 cpu-core-    aTRAM    ckhui  R       1:17      1 cpu-35
+           3769924 cpu-core-    atram averygra  R       0:40      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:15:30      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    2:55:44      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:05:37      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-11:58:01      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:16:04      1 cpu-77
+           3769866 cpu-s2-co       GC johnmeji  R    3:14:45      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:14:40      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:17:11      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim PD       0:00      1 (AssocMaxJobsLimit)
+           3769919 cpu-s3-sp      DOS tengfeim  R      11:27      1 cpu-64
+[madisonharris@login-1 madisonharris]$ sbatch atram.slurm.sh
+Submitted batch job 3769929
+[madisonharris@login-1 madisonharris]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769929 cpu-core- mharris_ madisonh  R       0:09      1 cpu-35
+           3769928 cpu-core-     lray     lray  R       1:01      1 cpu-35
+           3769926 cpu-core- mharris_ madisonh  R       1:51      1 cpu-35
+           3769925 cpu-core- ccarroll cascarro  R       2:09      1 cpu-35
+           3769923 cpu-core-    aTRAM    ckhui  R       3:00      1 cpu-35
+           3769924 cpu-core-    atram averygra  R       2:23      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:17:13      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    2:57:27      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:07:20      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-11:59:44      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:17:47      1 cpu-77
+           3769866 cpu-s2-co       GC johnmeji  R    3:16:28      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:16:23      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:18:54      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim PD       0:00      1 (AssocMaxJobsLimit)
+           3769919 cpu-s3-sp      DOS tengfeim  R      13:10      1 cpu-64
+[madisonharris@login-1 madisonharris]$ scancel 3769929
+[madisonharris@login-1 madisonharris]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769928 cpu-core-     lray     lray  R       1:36      1 cpu-35
+           3769926 cpu-core- mharris_ madisonh  R       2:26      1 cpu-35
+           3769925 cpu-core- ccarroll cascarro  R       2:44      1 cpu-35
+           3769923 cpu-core-    aTRAM    ckhui  R       3:35      1 cpu-35
+           3769924 cpu-core-    atram averygra  R       2:58      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:17:48      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    2:58:02      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:07:55      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-12:00:19      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:18:22      1 cpu-77
+           3769866 cpu-s2-co       GC johnmeji  R    3:17:03      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:16:58      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:19:29      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim PD       0:00      1 (AssocMaxJobsLimit)
+           3769919 cpu-s3-sp      DOS tengfeim  R      13:45      1 cpu-64
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  hostname_3769926.err  hostname_3769926.out  hostname_3769929.err  hostname_3769929.out  temp
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ mkdir job_output/
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  hostname_3769926.err  hostname_3769926.out  hostname_3769929.err  hostname_3769929.out  job_output  temp
+[madisonharris@login-1 madisonharris]$ mkdir job_output/
+mkdir: cannot create directory ‘job_output/’: File exists
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ sbatch atram.slurm.sh
+Submitted batch job 3769932
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  hostname_3769926.err  hostname_3769926.out  hostname_3769929.err  hostname_3769929.out  hostname_3769932.err  job_output  temp
+[madisonharris@login-1 madisonharris]$ cd job_output/
+[madisonharris@login-1 job_output]$ ls
+hostname_3769932.out
+[madisonharris@login-1 job_output]$ cd ../
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  hostname_3769926.err  hostname_3769926.out  hostname_3769929.err  hostname_3769929.out  hostname_3769932.err  job_output  temp
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ mkdir job_error/
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ mv *.err job_error/
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  hostname_3769926.out  hostname_3769929.out  job_error  job_output  temp
+[madisonharris@login-1 madisonharris]$ mv *.out job_output/
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  job_error  job_output  temp
+[madisonharris@login-1 madisonharris]$ cd temp
+[madisonharris@login-1 temp]$ ls
+atram_479c306l  atram_kh9jawjk  atram_p_fkdgca
+[madisonharris@login-1 temp]$ ls -l
+total 3
+drwx--S--- 5 madisonharris rc-biol_bids_adm 4096 Apr 26 15:47 atram_479c306l
+drwx--S--- 5 madisonharris rc-biol_bids_adm 4096 Apr 26 15:52 atram_kh9jawjk
+drwx--S--- 5 madisonharris rc-biol_bids_adm 4096 Apr 26 15:52 atram_p_fkdgca
+[madisonharris@login-1 temp]$ cd ../
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  job_error  job_output  temp
+[madisonharris@login-1 madisonharris]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769928 cpu-core-     lray     lray  R       6:29      1 cpu-35
+           3769926 cpu-core- mharris_ madisonh  R       7:19      1 cpu-35
+           3769925 cpu-core- ccarroll cascarro  R       7:37      1 cpu-35
+           3769923 cpu-core-    aTRAM    ckhui  R       8:28      1 cpu-35
+           3769931 cpu-core- pronghor     ekay  R       3:41      1 cpu-35
+           3769932 cpu-core- test_mha madisonh  R       2:37      1 cpu-35
+           3769924 cpu-core-    atram averygra  R       7:51      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:22:41      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    3:02:55      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:12:48      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-12:05:12      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:23:15      1 cpu-77
+           3769866 cpu-s2-co       GC johnmeji  R    3:21:56      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:21:51      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:24:22      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim PD       0:00      1 (AssocMaxJobsLimit)
+           3769919 cpu-s3-sp      DOS tengfeim  R      18:38      1 cpu-64
+[madisonharris@login-1 madisonharris]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769928 cpu-core-     lray     lray  R       9:21      1 cpu-35
+           3769926 cpu-core- mharris_ madisonh  R      10:11      1 cpu-35
+           3769925 cpu-core- ccarroll cascarro  R      10:29      1 cpu-35
+           3769931 cpu-core- pronghor     ekay  R       6:33      1 cpu-35
+           3769932 cpu-core- test_mha madisonh  R       5:29      1 cpu-35
+           3769937 cpu-core- mcvatram mmcvicar  R       0:31      1 cpu-35
+           3769938 cpu-core-    aTRAM    ckhui  R       0:25      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:25:33      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    3:05:47      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:15:40      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-12:08:04      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:26:07      1 cpu-77
+           3769936 cpu-s2-co rc-g16-0  dadecer  R       0:49      1 cpu-23
+           3769935 cpu-s2-co rc-g16-0  dadecer  R       0:55      1 cpu-23
+           3769934 cpu-s2-co rc-g16-0  dadecer  R       1:08      1 cpu-77
+           3769933 cpu-s2-co rc-g16-0  dadecer  R       1:16      1 cpu-76
+           3769866 cpu-s2-co       GC johnmeji  R    3:24:48      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:24:43      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:27:14      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim PD       0:00      1 (AssocMaxJobsLimit)
+           3769919 cpu-s3-sp      DOS tengfeim  R      21:30      1 cpu-64
+[madisonharris@login-1 madisonharris]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769931 cpu-core- pronghor     ekay  R       8:11      1 cpu-35
+           3769932 cpu-core- test_mha madisonh  R       7:07      1 cpu-35
+           3769937 cpu-core- mcvatram mmcvicar  R       2:09      1 cpu-35
+           3769938 cpu-core-    aTRAM    ckhui  R       2:03      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:27:11      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    3:07:25      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:17:18      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-12:09:42      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:27:45      1 cpu-77
+           3769936 cpu-s2-co rc-g16-0  dadecer  R       2:27      1 cpu-23
+           3769935 cpu-s2-co rc-g16-0  dadecer  R       2:33      1 cpu-23
+           3769934 cpu-s2-co rc-g16-0  dadecer  R       2:46      1 cpu-77
+           3769933 cpu-s2-co rc-g16-0  dadecer  R       2:54      1 cpu-76
+           3769866 cpu-s2-co       GC johnmeji  R    3:26:26      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:26:21      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:28:52      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim PD       0:00      1 (AssocMaxJobsLimit)
+           3769919 cpu-s3-sp      DOS tengfeim  R      23:08      1 cpu-64
+[madisonharris@login-1 madisonharris]$ nano cd atram_out/ | ls *filtered* | wc
+ls: cannot access *filtered*: No such file or directory
+      0       0       0
+[madisonharris@login-1 madisonharris]$ cd atram_out/
+[madisonharris@login-1 atram_out]$ ls
+AlspHabad_2_proteins_C1_AUG_0_12_mR1_1.all_contigs.fasta       AlspHabad_2_proteins_C1_PROT_1_15_mR1_2.all_contigs.fasta
+AlspHabad_2_proteins_C1_AUG_0_12_mR1_1.filtered_contigs.fasta  AlspHabad_2_proteins_C1_PROT_1_15_mR1_2.filtered_contigs.fasta
+[madisonharris@login-1 atram_out]$ ls *filtered | wc
+ls: cannot access *filtered: No such file or directory
+      0       0       0
+[madisonharris@login-1 atram_out]$ ls *filtered* | wc
+      2       2     125
+[madisonharris@login-1 atram_out]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769937 cpu-core- mcvatram mmcvicar  R       5:50      1 cpu-35
+           3769938 cpu-core-    aTRAM    ckhui  R       5:44      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:30:52      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    3:11:06      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:20:59      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-12:13:23      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:31:26      1 cpu-77
+           3769936 cpu-s2-co rc-g16-0  dadecer  R       6:08      1 cpu-23
+           3769935 cpu-s2-co rc-g16-0  dadecer  R       6:14      1 cpu-23
+           3769934 cpu-s2-co rc-g16-0  dadecer  R       6:27      1 cpu-77
+           3769933 cpu-s2-co rc-g16-0  dadecer  R       6:35      1 cpu-76
+           3769866 cpu-s2-co       GC johnmeji  R    3:30:07      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:30:02      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:32:33      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim PD       0:00      1 (AssocMaxJobsLimit)
+           3769919 cpu-s3-sp      DOS tengfeim  R      26:49      1 cpu-64
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  job_error  job_output  temp
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ cd job_output/
+[madisonharris@login-1 job_output]$ ls
+hostname_3769926.out  hostname_3769929.out  hostname_3769932.out
+[madisonharris@login-1 job_output]$ ls -l
+total 2113
+-rw-r--r-- 1 madisonharris rc-biol_bids_adm 9835 Apr 26 15:55 hostname_3769926.out
+-rw-r--r-- 1 madisonharris rc-biol_bids_adm  939 Apr 26 15:47 hostname_3769929.out
+-rw-r--r-- 1 madisonharris rc-biol_bids_adm 9835 Apr 26 16:00 hostname_3769932.out
+[madisonharris@login-1 job_output]$ cd ../
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.sh  job_error  job_output  temp
+[madisonharris@login-1 madisonharris]$ touch atram.slurm.20.sh
+[madisonharris@login-1 madisonharris]$ touch atram.slurm.20.sh
+[madisonharris@login-1 madisonharris]$ ls
+atram_out  atram.slurm.20.sh  atram.slurm.sh  job_error  job_output  temp
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.20.sh 
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.sh 
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.20.sh 
+[madisonharris@login-1 madisonharris]$ sbatch atram.slurm.20.sh 
+Submitted batch job 3769945
+[madisonharris@login-1 madisonharris]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3769938 cpu-core-    aTRAM    ckhui  R      14:45      1 cpu-35
+           3769944 cpu-core- pronghor     ekay  R       1:42      1 cpu-35
+           3769945 cpu-core- mh_atram madisonh  R       0:03      1 cpu-35
+           3769882 cpu-core-   SiGesw mlotfpou  R    2:39:53      4 cpu-[19-22]
+           3769873 cpu-core- OF_8020_ mberghou  R    3:20:07      5 cpu-[0-2,78-79]
+           3769821 cpu-core-  640_19W fpulcian  R    5:30:00      8 cpu-[25-32]
+           3512899 cpu-core-   rc-g16  hpoudel  R 7-12:22:24      1 cpu-18
+           3768438 cpu-s2-co rc-g16-0  dadecer  R 1-02:40:27      1 cpu-77
+           3769936 cpu-s2-co rc-g16-0  dadecer  R      15:09      1 cpu-23
+           3769935 cpu-s2-co rc-g16-0  dadecer  R      15:15      1 cpu-23
+           3769934 cpu-s2-co rc-g16-0  dadecer  R      15:28      1 cpu-77
+           3769933 cpu-s2-co rc-g16-0  dadecer  R      15:36      1 cpu-76
+           3769866 cpu-s2-co       GC johnmeji  R    3:39:08      1 cpu-76
+           3769645 cpu-s2-co      8nm  jli2345  R   20:39:03      4 cpu-[36-39]
+           3558538 cpu-s2-co      ZSM  jli2345  R 4-05:41:34      1 cpu-24
+           3769922 cpu-s3-sp      DOS tengfeim  R       8:36      1 cpu-64
+[madisonharris@login-1 madisonharris]$ nano atram.slurm.20.sh 
+[madisonharris@login-1 madisonharris]$ 
+
+
+
+
+
+
